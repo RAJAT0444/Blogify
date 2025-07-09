@@ -15,6 +15,7 @@
     "cloudinary": "^2.7.0",
     "formidable": "^3.5.4",
     "framer-motion": "^12.23.0",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.523.0",
     "mongodb": "^6.17.0",
     "mongoose": "^8.16.2",
