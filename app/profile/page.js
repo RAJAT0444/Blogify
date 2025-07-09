@@ -90,6 +90,7 @@
 
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ProfilePage() {
@@ -127,11 +128,18 @@ export default function ProfilePage() {
             <div key={post._id} className="border p-4 rounded shadow">
               <h3 className="text-lg font-bold">{post.title}</h3>
               {post.image && (
-                <img
+                // <img
+                //   src={post.image}
+                //   alt=""
+                //   className="w-full h-40 object-cover mt-2 rounded"
+                //   onError={e => (e.target.style.display = 'none')}
+                // />
+                <Image
                   src={post.image}
-                  alt=""
-                  className="w-full h-40 object-cover mt-2 rounded"
-                  onError={e => (e.target.style.display = 'none')}
+                  alt="Post image"
+                  fill
+                  className="object-cover"
+                  onError={() => setShowImage(false)}
                 />
               )}
               <p className="mt-2">{post.content}</p>

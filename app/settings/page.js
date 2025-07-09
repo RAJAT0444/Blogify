@@ -323,10 +323,23 @@ export default function SettingsPage() {
           />
         </div>
 
-        <div>
+        {/* <div>
           <label className="block font-semibold mb-1">Profile Image</label>
           <input type="file" accept="image/*" onChange={handleImageChange} />
           {previewUrl && (
+            <img
+              src={previewUrl}
+              alt="Preview"
+              className="mt-2 w-32 h-32 object-cover rounded-full border"
+            />
+          )}
+        </div> */}
+        <div>
+          <label className="block font-semibold mb-1">Profile Image</label>
+          <input type="file" accept="image/*" onChange={handleImageChange} />
+
+          {previewUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               src={previewUrl}
               alt="Preview"

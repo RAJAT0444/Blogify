@@ -216,6 +216,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { FiImage, FiEdit } from 'react-icons/fi'
 
@@ -303,11 +304,19 @@ export default function EditPost({ params }) {
           {formData.image && (
             <div className="mt-2">
               <p className="text-sm text-gray-500 mb-1">Preview:</p>
-              <img
+              {/* <img
                 src={formData.image}
                 alt="Preview"
                 className="w-full max-h-64 object-contain border rounded"
                 onError={e => (e.target.style.display = 'none')}
+              /> */}
+              <Image
+                src={formData.image}
+                alt="Preview"
+                width={500}
+                height={300}
+                className="w-full max-h-64 object-contain border rounded"
+                onError={() => setShowImage(false)}
               />
             </div>
           )}
