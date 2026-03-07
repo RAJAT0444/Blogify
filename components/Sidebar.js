@@ -34,7 +34,7 @@ export default function Sidebar({ isOpen, onClose }) {
     { href: "/create", label: "Create Post", icon: <FiEdit size={20} /> },
     { href: "/bookmarks", label: "Bookmarks", icon: <FiBookmark size={20} /> },
     { href: "/analytics", label: "Analytics", icon: <FiTrendingUp size={20} /> },
-    { href: "/settings", label: "Settings", icon: <FiSettings size={20} /> },
+    // { href: "/settings", label: "Settings", icon: <FiSettings size={20} /> },
     { href: "/support", label: "Support 24×7", icon: <FiMessageSquare size={20} /> },
   ];
 
